@@ -29,6 +29,7 @@ dependencies {
 sourceSets {
     main {
         java {
+            srcDir 'src/agt'
             srcDir 'src/java'
             srcDir 'src/env'
             //srcDir '.' // some old jason apps store .java files in project root
@@ -43,7 +44,7 @@ task run (type: JavaExec, dependsOn: 'classes') {
     group = 'Jason'
     description 'runs the application'
     mainClass = 'jason.infra.local.RunLocalMAS'
-    args = ['main.mas2j']
+    args = ['DomesticRobot.mas2j']
 	// options:
 	//     args = ['template.mas2j', '--debug', '--no-net', '--empty-mas']
 	//     args = ['template.mas2j', '--log-conf', 'l.p'] // to use file l.p to configure logging
@@ -54,6 +55,6 @@ task runJade (type: JavaExec, dependsOn: 'classes') {
     group = 'Jason'
     description 'runs the application with Jade infrastructure'
     mainClass = 'jason.infra.jade.RunJadeMAS'
-    args = [ 'main.mas2j' ]
+    args = [ 'DomesticRobot.mas2j' ]
     classpath sourceSets.main.runtimeClasspath
 }
