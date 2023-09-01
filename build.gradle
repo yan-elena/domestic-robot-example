@@ -14,13 +14,19 @@ apply plugin: 'java'
 //group   'io.github.jason-lang'
 
 repositories {
+    maven { url "https://raw.githubusercontent.com/jacamo-lang/mvn-repo/master" }
+    maven { url "https://repo.gradle.org/gradle/libs-releases" }
+    maven { url "https://jitpack.io" }
+    flatDir { dirs 'lib' }
+
     mavenCentral()
     //maven { url "https://raw.githubusercontent.com/jacamo-lang/mvn-repo/master" }
     //maven { url "https://jade.tilab.com/maven/" }
 }
 
 dependencies {
-    implementation 'io.github.jason-lang:jason-interpreter:3.2.1'
+    implementation('io.github.jason-lang:jason-interpreter:3.2.1-SNAPSHOT')
+    implementation 'io.github.yan-elena:agent-logging:0.1.0'
 
     // to use locally installed jars:
     //implementation fileTree(dir: 'lib', include: '*.jar')

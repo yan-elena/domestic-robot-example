@@ -6,9 +6,12 @@
 
 MAS domestic_robot {
     environment: example.HouseEnv(gui) // use "nogui" as parameter to not show the GUI
-    agents: robot;
-            owner;
-            supermarket;
+    agents: robot   agentArchClass     log.LoggerArch
+                    agentClass    log.LoggerAg;
+            owner   agentArchClass     log.LoggerArch
+                    agentClass    log.LoggerAg;
+            supermarket   agentArchClass     log.LoggerArch
+                    agentClass    log.LoggerAg;
 
     aslSourcePath: "src/agt";
 }
