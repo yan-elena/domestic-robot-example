@@ -8,7 +8,7 @@ In this repository, the example is configured to be used with the [*logging comp
 
 After running the system, the generated log files of the system can be found in the `/log` folder, and the `.json` files can be loaded into the [*explanation web application*](https://yan-elena.github.io/agent-explanation/) to explore the generated narrative of the example at different levels of abstraction.
 
-## Narrative of the domestic robot example -- things to try out:
+## Narrative of the domestic robot example - things to try out:
 
 Once the `supermarket`, `owner` and `robot` files are uploaded, the user can select the agent with which he wants to view the narration.
 
