@@ -8,17 +8,25 @@ In this repository, the example is configured to be used with the [*logging comp
 
 After running the system, the generated log files of the system can be found in the `/log` folder, and the `.json` files can be loaded into the [*explanation web application*](https://yan-elena.github.io/agent-explanation/) to explore the generated narrative of the example at different levels of abstraction.
 
-## Narrative of the domestic robot example - things to try out:
+## Narrative of the domestic robot example:
 
 Once the `supermarket`, `owner` and `robot` files are uploaded, the user can select the agent with which he wants to view the narration.
 
-<img src="https://github.com/yan-elena/domestic-robot-example/assets/78790594/59dde0f8-8248-4957-bb1d-dcb6055d41dc" width=50%>
+<img src="https://github.com/yan-elena/domestic-robot-example/assets/78790594/954fe114-ba57-4b07-8e9b-8e6977c8f238" width=70%>
 
-Through the application, it is possible to explore the different levels of explanation of the various agents in the system.
-An interesting use of the application is to exploit the search bar to filter, for instance, all the desires of an agent:
+Through the web application, it is possible to explore the different levels of explanation of the various agents in the system:
 
-<img src="https://github.com/yan-elena/domestic-robot-example/assets/78790594/89ab342c-b088-4eab-bc3f-cd6b85abc8dc" width=50%>
+### Narrative at Implementation Level
+A detailed and technical level that follows Jason's operational semantics and reasoning cycle.
 
-or to explore the life cycle of a particular desire or event:
+<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/0bd9feb8-f056-4fae-bdbb-7925c5a48ab2" width=70%>
 
-<img src="https://github.com/yan-elena/domestic-robot-example/assets/78790594/a6fc8079-315d-48e3-a630-6c50e5e984b6" width=50%>
+### Narrative at Design Level
+A higher level that narrates the agent's decisions following its cognitive abstraction according to the Belief-Desire-Intention model.
+
+<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/3d00b844-db84-485c-9494-d7199359208d" width=70%>
+
+### Explanation of a specific event
+Some events are associated with an explanation link to a previous event that caused it.
+
+<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/8136e35b-8893-44d0-aa30-36d820cfca17" width=70%>
