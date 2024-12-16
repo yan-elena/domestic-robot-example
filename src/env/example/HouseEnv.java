@@ -88,7 +88,12 @@ public class HouseEnv extends Environment {
             }
 
         } else if (action.equals(gb)) {
-            result = model.getBeer();
+            try {
+                result = model.getBeer();
+            } catch (Exception e) {
+                logger.info("Failed to execute action get beer " + e);
+            }
+            //result = model.getBeer();
 
         } else if (action.equals(hb)) {
             result = model.handInBeer();

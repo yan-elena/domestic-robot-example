@@ -68,16 +68,24 @@ public class HouseModel extends GridWorldModel {
         return true;
     }
 
-    boolean getBeer() {
-        if (fridgeOpen && availableBeers > 0 && !carryingBeer) {
+    boolean getBeer() throws Exception {
+        if (!fridgeOpen) {
+            throw new Exception("the fridge is not open!");
+        } else if (availableBeers <= 0) {
+            throw new Exception("beers not available!");
+        } else if (carryingBeer) {
+            throw new Exception("the robot is already carrying beer!");
+        } else {
+//        if (fridgeOpen && availableBeers > 0 && !carryingBeer) {
             availableBeers--;
             carryingBeer = true;
             if (view != null)
                 view.update(lFridge.x,lFridge.y);
             return true;
-        } else {
-            return false;
         }
+//        else {
+//            return false;
+//        }
     }
 
     boolean addBeer(int n) {
