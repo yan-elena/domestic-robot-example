@@ -33,7 +33,7 @@ too_much(B) :-
    <- .send(supermarket, achieve, order(beer,5));
       !at(robot,fridge). // go to fridge and wait there.
 
-+!has(owner,beer)
+-!has(owner,beer)
    :  too_much(beer) & limit(beer,L)
    <- .concat("The Department of Health does not allow me to give you more than ", L,
               " beers a day! I am very sorry about that!",M);

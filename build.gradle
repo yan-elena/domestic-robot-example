@@ -27,7 +27,7 @@ repositories {
 
 dependencies {
     implementation 'io.github.jason-lang:jason-interpreter:3.2.1-SNAPSHOT'
-    implementation 'io.github.yan-elena:agent-logging:0.1.2'
+    implementation 'io.github.yan-elena:agent-logging:0.1.5'
 
     // to use locally installed jars:
     //implementation fileTree(dir: 'lib', include: '*.jar')
